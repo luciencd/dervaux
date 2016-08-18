@@ -1,0 +1,37 @@
+.header {
+    height:150px;
+    background:#F0F0F0;
+    border:1px solid #CCC;
+
+    margin:0px auto;
+}
+.picdisplay {
+  z-index:10;
+}
+.grid-item {
+  position:relative;
+}
+div.descriptiondisplay {
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity:.8;
+  padding:5px;
+  z-index:1;
+  background-color:gray;
+  color:black;
+}
+div.namedisplay {
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity:.8;
+  padding:5px;
+  z-index:1;
+  background-color:gray;
+  color:black;
+}

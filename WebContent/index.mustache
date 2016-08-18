@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--<link rel="stylesheet" type="text/css" href="index.css">-->
+	<title>Dervaux </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+
+	    </script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="./index.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+	<script src="./masonry.pkgd.min.js"></script>
+  <script src="./imagesloaded.pkgd.min.js"></script>
+	<!-- or -->
+
+
+
+<style>
+* { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+    <div class="container">
+      <div class="navbar-header">
+        <button aria-controls="bs-navbar" aria-expanded="false" class="collapsed navbar-toggle" data-target="#bs-navbar" data-toggle="collapse" type="button">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="../" class="navbar-brand">Outils</a>
+      </div>
+      <nav class="collapse navbar-collapse" id="bs-navbar">
+        <ul class="nav navbar-nav">
+          <li class="active"> <a href="./photoform.html">Ajoutez des photos!</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+	<div class="container">
+	  <div class="jumbotron">
+	    <h1>La Famille Dervaux</h1>
+	    <p>Nous fetons les 60 ans de marriage Pierre et Genevieve.</p>
+	  </div>
+	</div>
+	<div class = "container">
+		<div>
+		<div class="grid" style = "width:900px;margin:0 auto;" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }' data-js-module="imagesloaded-progress">
+			<div class="grid-sizer"></div>
+        {{#submissions}}
+          <div class="grid-item" >
+            <a href = "../pictures/{{Link}}">
+            <input class = "name" value ="{{Name}}" style ="display:none;">
+            <input class = "description" value ="{{Description}}" style ="display:none;">
+            <div class = "namedisplay" style ="display:none;">{{Name}}</div>
+
+            <img class = "picdisplay" src="../pictures/{{Link}}" >
+            <div class = "descriptiondisplay" style ="display:none;">{{Description}}</div>
+          </a>
+          </div>
+        {{/submissions}}
+		</div>
+	</div>
+	</div>
+
+</body>
+<script>
+
+$('.grid').masonry({
+  // options
+  itemSelector: '.grid-item',
+  columnWidth: 200
+});
+</script>
+<script src="index.js"></script>
+</html>
