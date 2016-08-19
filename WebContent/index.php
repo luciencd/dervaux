@@ -32,6 +32,7 @@ while($r = mysqli_fetch_array($result))
 
 
 
+
   $sql3 = "SELECT * FROM icons WHERE resource = '".$r["resource"]."' and type = '".$r["type"]."' and data_kind = '".$action["data_kind"]."' and data_type = '".$action["data_type"]."';";
 	//echo $sql3;
   $result3 = mysqli_query($connect,$sql3);
