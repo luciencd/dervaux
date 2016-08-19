@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--<link rel="stylesheet" type="text/css" href="index.css">-->
+	<title>Dervaux </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+
+	    </script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="./index.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+	<script src="./masonry.pkgd.min.js"></script>
+  <script src="./imagesloaded.pkgd.min.js"></script>
+	<!-- or -->
+
+
+
+<style>
+* { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
+</style>
+</head>
+<body>
+  <br>
+<div class = "container">
+
+<form role="form" action="photoprocess.php" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="name">Nom</label>
+    <input name = "name" type="name" class="form-control" id="name">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Description</label>
+    <input name = "description" type="description" class="form-control" id="description">
+  </div>
+
+  <input type="file" name="file" id="file">
+  <br>
+  <button type="submit" class="btn btn-default">Ajouter</button>
+</form>
+</div>
+</body>
+</html>
