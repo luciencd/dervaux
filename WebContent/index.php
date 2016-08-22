@@ -22,6 +22,12 @@ while($r = mysqli_fetch_array($result))
   //$newrow["Type"] = $r["type"];
 	$newrow["Description"] = $r["description"];
 	$newrow["Link"] = $r["link"];
+	if($r["type"] == "application/pdf"){
+		$newrow["Picture"] = "./Graphicloads-Filetype-Pdf.ico";
+	}else{
+		$newrow["Picture"] = $r["link"];
+	}
+
   //$newrow["PostedDate"] = $r["posted_date"];
 	/*
   $sql2 = "SELECT * FROM action WHERE s_id = '".$r["s_id"]."';";
